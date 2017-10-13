@@ -5,7 +5,7 @@ const db = require('../')
 const defaul = 'evaldez'
 
 const config = {
-  dialect: 'posgresql', // el motor de base de datos
+  dialect: 'postgres', // el motor de base de datos
   databese: process.env.DB_NAME || defaul, // el nombre de la base de datos
   username: process.env.BD_USER || defaul, // el usuario admin de la base de datos
   password: process.env.DB_PASS || '1234', // el password del usario de la base de datos
