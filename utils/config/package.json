@@ -1,0 +1,25 @@
+{
+  "name": "utils-config",
+  "version": "1.0.0",
+  "description": "A Simple Config handler",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edgarvaldez99/platziverse.git"
+  },
+  "author": "evaldez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edgarvaldez99/platziverse/issues"
+  },
+  "homepage": "https://github.com/edgarvaldez99/platziverse#readme",
+  "dependencies": {
+    "debug": "^3.1.0"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3"
+  }
+}

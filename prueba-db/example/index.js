@@ -4,19 +4,14 @@ const db = require('../')
 
 const defaul = 'evaldez'
 
-const config = {
-  dialect: 'postgres', // el motor de base de datos
-  databese: process.env.DB_NAME || defaul, // el nombre de la base de datos
-  username: process.env.BD_USER || defaul, // el usuario admin de la base de datos
-  password: process.env.DB_PASS || '1234', // el password del usario de la base de datos
-  host: process.env.HOST || 'localhost' // el host desde donde nos conectamos con la base de datos
-}
+const config = require('utils-config').db
+const { handleFatalError } = require('utils-errors')
 
-async function executarQuerys () {
+async function executeQueries () {
     // const Venta = db(config).Venta;
     // const Detalle = db(config).Detalle;
     // shorcut
-  const { Venta, Detalle } = db(config).catch(handleFatalError)
+  const { Venta, Detalle } = await db(config).catch(handleFatalError)
 
   const venta = await Venta.createOrUpdate({
         // id: autoincremental,
@@ -48,12 +43,6 @@ async function executarQuerys () {
   let detallesVenta = await Detalle.findByVenta(venta.id).catch(handleFatalError)
 
   console.log(detallesVenta)
-
-  function handleFatalError (err) {
-    console.error(err.message)
-    console.error(err.stack)
-    process.exit(1)
-  }
 }
 
-executarQuerys()
+executeQueries()

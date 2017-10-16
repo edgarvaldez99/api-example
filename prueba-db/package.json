@@ -1,7 +1,7 @@
 {
-  "name": "prueba-db",
+  "name": "config",
   "version": "1.0.0",
-  "description": "El módulo de base de datos",
+  "description": "El módulo configuraciones, ya sea para de base de datos u otros",
   "main": "index.js",
   "scripts": {
     "lint": "standard"
@@ -16,8 +16,12 @@
     "chalk": "^2.1.0",
     "debug": "^3.1.0",
     "defaults": "^1.0.3",
+    "inquirer": "^3.3.0",
+    "minimist": "^1.2.0",
+    "pg": "^7.3.0",
+    "pg-hstore": "^2.3.2",
     "sequelize": "^4.13.8",
-    "pg": "^7.1.0",
-    "pg-hstore": "^2.3.2"
+    "utils-config": "file:../utils/config",
+    "utils-errors": "file:../utils/errors"
   }
 }

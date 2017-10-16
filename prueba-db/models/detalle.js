@@ -8,7 +8,7 @@ module.exports = function setupVentaModel (config) {
 
   return sequelize.define('detalle', {
     id: {
-      type: Sequelize.STRING,
+      type: Sequelize.INTEGER,
       autoIncrement: true,
       primaryKey: true
     },
@@ -17,7 +17,7 @@ module.exports = function setupVentaModel (config) {
       allowNull: false
     },
     precio: {
-      type: Sequelize.NUMBER,
+      type: Sequelize.INTEGER,
       allowNull: false
     },
     producto: {

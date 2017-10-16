@@ -7,7 +7,8 @@ let db
 
 module.exports = function setupDatabase (config) {
   if (!db) {
-    db = new Sequelize(config)
+    Object.assign(config, { operatorsAliases: false })
+    db = new Sequelize(config.database, config.username, config.password, config)
   }
   return db
 }

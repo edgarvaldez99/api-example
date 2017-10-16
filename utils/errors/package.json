@@ -1,0 +1,26 @@
+{
+  "name": "utils-errors",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Simple Exception and Error handlers",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edgarvaldez99/platziverse.git"
+  },
+  "author": "evaldez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edgarvaldez99/platziverse/issues"
+  },
+  "homepage": "https://github.com/edgarvaldez99/platziverse#readme",
+  "dependencies": {
+    "chalk": "^2.1.0"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3"
+  }
+}
